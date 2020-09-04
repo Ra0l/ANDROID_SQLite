@@ -40,8 +40,8 @@ public class InsertActivity extends AppCompatActivity {
                          nombre.getText().toString(),
                          Integer.valueOf(edad.getText().toString()),
                          correo.getText().toString()
-
                  );
+
                 data  = new Data(getApplicationContext());
                 data.open();
                 data.insertUsuario(usuario);

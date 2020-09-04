@@ -64,4 +64,11 @@ public class Data {
         String[] whereArgs = new String[] {String.valueOf(id)};
         sqLiteDatabase.delete(SQLconstants.tableUsuarios,SQLconstants.WHEREID_CLAUSE,whereArgs);
     }
+
+    //instruccion actualizar
+    public void UpdateUser(String id, ContentValues contentValues){
+        String[] whereArgs = new String[]{String.valueOf(id)};
+         sqLiteDatabase.update(SQLconstants.tableUsuarios,
+                contentValues,SQLconstants.SEARCH_BY_ID,whereArgs);
+    }
 }

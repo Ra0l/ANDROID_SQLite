@@ -24,7 +24,9 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         usuario = new Usuario();
+
         id = findViewById(R.id.id);
+
         search_button = findViewById(R.id.search);
         search_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +37,8 @@ public class SearchActivity extends AppCompatActivity {
                 usuario = data.getUsuario(idSearch);
 
                 Log.e("RESULTADO: ", usuario.getNombre());
+
+                data.close();
             }
         });
     }

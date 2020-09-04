@@ -5,26 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.MainActivity">
-
-    <Button
-        android:id="@+id/insert"
-        android:text="Insertar"
+    tools:context=".activities.UpdateActivity">
+    
+    <EditText
+        android:id="@+id/id_update"
+        android:hint="ID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <Button
-        android:id="@+id/search_activity"
+        android:id="@+id/search_usuario_button"
         android:text="Buscar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/delete_activity"
-        android:text="Eliminar"
+    <EditText
+        android:id="@+id/update_nombre"
+        android:hint="Nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/update_edad"
+        android:hint="Edad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/update_correo"
+        android:hint="Correo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <Button
-        android:id="@+id/button_update"
+        android:id="@+id/update_button"
         android:text="Actualizar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

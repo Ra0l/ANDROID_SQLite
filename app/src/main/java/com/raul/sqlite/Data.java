@@ -29,13 +29,13 @@ public class Data {
         sqLiteOpenHelper.close();
     }
 
-    //Clausula insertar USUARIO
+    //Instruccion inertar
     public void insertUsuario(Usuario usuario){
         ContentValues values = usuario.toValues();
         sqLiteDatabase.insert(SQLconstants.tableUsuarios,null,values);
     }
 
-    //cLAUSULA Obtener usuario
+    //instruccion buscar
     public Usuario getUsuario(String id){
         Usuario usuario = new Usuario();
         String[] whereArgs = new String[]{id};
@@ -57,5 +57,11 @@ public class Data {
             }
 
         return usuario;
+    }
+
+    //instruccion eliminar usuario
+    public void deleteUser(String id){
+        String[] whereArgs = new String[] {String.valueOf(id)};
+        sqLiteDatabase.delete(SQLconstants.tableUsuarios,SQLconstants.WHEREID_CLAUSE,whereArgs);
     }
 }

@@ -11,7 +11,7 @@ import com.raul.sqlite.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button_insert, search_button;
+    Button button_insert, search_button, button_delete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),SearchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button_delete = findViewById(R.id.delete_activity);
+        button_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),DeleteActivity.class);
                 startActivity(intent);
             }
         });
